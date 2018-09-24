@@ -24,9 +24,9 @@ L'application doit pouvoir répondre à ces différents besoins :
 * Pouvoir évaluer la mission après l'avoir terminée.
 
 ## Technologies utilisées : 
-**Front :**
+### Front :
 * React Native
-**Back :**
+### Back :
 * Firebase
 
 ## Planning : 
