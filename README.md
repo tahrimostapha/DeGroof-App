@@ -3,8 +3,8 @@
 
 
 ## Team : 
-**Connerotte Julie**, **Wyns Stéphane**, **Janssens Sammuel** : Front-End
-**Sel Anthony**, **Tahri Mostapha** : Back-End
+* **Connerotte Julie**, **Wyns Stéphane**, **Janssens Sammuel** : Front-End
+* **Sel Anthony**, **Tahri Mostapha** : Back-End
 
 ## ScreenShots :
 Néant
@@ -25,9 +25,9 @@ L'application doit pouvoir répondre à ces différents besoins :
 
 ## Technologies utilisées : 
 **Front :**
-   * React Native
+* React Native
 **Back :**
-   * Firebase
+* Firebase
 
 ## Planning : 
 Néant
