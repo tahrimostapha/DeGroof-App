@@ -1,40 +1,56 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
-import { Container, ListItem, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right, Switch, List } from 'native-base';
-export default class CardShowcaseExample extends Component {
+import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button } from 'native-base';
+export default class ListAvatarExample extends Component {
   render() {
     return (
       <Container>
         <Content>
-          <Card style={{flex: 0}}>
-            <CardItem>
-              <Body>
-                <Image source={{uri: 'https://via.placeholder.com/200x320'}} style={{height: 200, width: 320, flex: 1}}/>
-                <Text>
-                  Iamque lituis cladium concrepantibus internarum non celate ut antea turbidum saeviebat ingenium a veri consideratione detortum et nullo inpositorum vel conpositorum fidem sollemniter inquirente nec discernente a societate noxiorum insontes velut exturbatum e iudiciis fas omne discessit
-                </Text>
-              </Body>
-            </CardItem>
-            <CardItem>
-            	<ListItem icon>
-		            <Left>
-		              <Button style={{ backgroundColor: "#FF9501" }}>
-		                <Icon active name="plane" />
-		              </Button>
-		            </Left>
-		            <Body>
-		              <Text>Airplane Mode</Text>
-		            </Body>
-		        </ListItem>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button primary textStyle={{color: '#87838B'}}>
-                  <Text>APPLY for this mission</Text>
-                </Button>
-              </Left>
-            </CardItem>
-          </Card>
+	        <Image
+              style={{height: 250, flex:1}}
+              source={{uri: 'https://e3.365dm.com/18/04/1096x616/skynews-kim-jong-un-north-korea_4278358.jpg'}}
+            />
+			<List>
+				<ListItem avatar>
+				  <Left>
+				    <Thumbnail source={{ uri: 'https://pmcdeadline2.files.wordpress.com/2017/09/ap_17272739120053.jpg?w=446&h=299&crop=1' }} />
+				  </Left>
+				  <Body>
+				    <Text>Name</Text>
+				    <Text note>This is the name</Text>
+				  </Body>
+				</ListItem>
+				<ListItem avatar>
+				  <Left>
+				    <Thumbnail source={{ uri: 'https://pmcdeadline2.files.wordpress.com/2017/09/ap_17272739120053.jpg?w=446&h=299&crop=1' }} />
+				  </Left>
+				  <Body>
+				    <Text>Region</Text>
+				    <Text note>This is the region</Text>
+				  </Body>
+				</ListItem>
+				<ListItem avatar>
+				  <Left>
+				    <Thumbnail source={{ uri: 'https://pmcdeadline2.files.wordpress.com/2017/09/ap_17272739120053.jpg?w=446&h=299&crop=1' }} />
+				  </Left>
+				  <Body>
+				    <Text>Field</Text>
+				    <Text note>Education, social</Text>
+				  </Body>
+				</ListItem>
+				<ListItem avatar>
+				  <Left>
+				    <Thumbnail source={{ uri: 'https://pmcdeadline2.files.wordpress.com/2017/09/ap_17272739120053.jpg?w=446&h=299&crop=1' }} />
+				  </Left>
+				  <Body>
+				    <Text>Region</Text>
+				    <Text note>This is the region</Text>
+				  </Body>
+				</ListItem>
+			</List>
+			<Button rounded>
+	           <Text>Primary</Text>
+	        </Button>
         </Content>
       </Container>
     );
