@@ -9,7 +9,6 @@ export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
-<<<<<<< HEAD
 async componentWillMount() {
   await Expo.Font.loadAsync({
     'Roboto': require('native-base/Fonts/Roboto.ttf'),
@@ -28,9 +27,6 @@ async componentWillMount() {
     } else {
       return (
         <View style={styles.container}>
-          <Button>
-            <Text>Mon premier bouton</Text>
-          </Button>
           {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
           <AppNavigator />
         </View>
