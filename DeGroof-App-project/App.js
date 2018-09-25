@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import SignupScreen from './SignupScreen';
+import AuthScreen from './AuthScreen';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <SignupScreen></SignupScreen>
+        <AuthScreen></AuthScreen>
       </View>
     );
   }
