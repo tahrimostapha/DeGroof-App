@@ -11,7 +11,7 @@ export default class HomeScreen extends Component {
     return (
 
         <Container>
-            <ImageBackground source={require('../cover_grey.png')} style={{width: '100%', height: '100%', resizeMode: 'cover'}}>
+            <ImageBackground source={require('../cover_grey.png')} style={{width: '100%', height: '100%'}}>
                 <Content>
                     <Image 
                         source={require('../logo_DP.png')} 
