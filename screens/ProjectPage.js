@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button } from 'native-base';
 export default class ListAvatarExample extends Component {
+  static navigationOptions = {
+      header: null,
+  };
   render() {
     return (
       <Container>
