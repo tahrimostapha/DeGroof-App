@@ -3,22 +3,32 @@ import { Image } from 'react-native';
 import { Container, Header, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon, Button } from 'native-base';
 const cards = [
   {
-    text: 'Projet Compta',
-    name: 'Xcompta Fondation',
+    field: 'Accounting',
+    name: 'Xcompta project from ABC Agency ',
     city: 'Evere',
+    type: 'Coaching',
     image: require('../compta.png'),
   },
      {
-    text: 'Projet Eco',
-    name: 'Xfarm Fondation',
+    field: 'Ecology',
+    name: 'Xfarm project from PigAvenue SPRL ',
     city: 'Waterloo',
+    type: 'Mentoring',
     image: require('../fermier.jpg'),
   },
       {
-    text: 'Projet Gestion',
-    name: 'Xgestion Fondation',
+    field: 'Management',
+    name: 'Xgestion project from SNCB',
     city: 'Ixelles',
+    type: 'Coaching',      
     image: require('../gestion.jpg'),
+  },
+      {
+    field: 'Education',
+    name: 'JeanLuc project from JeanLuc Farming',
+    city: 'Habergy',
+    type: 'Mentoring',      
+    image: require('../champs.png'),
   },
 ];
 export default class DeckSwiperAdvancedExample extends Component {
@@ -37,7 +47,7 @@ export default class DeckSwiperAdvancedExample extends Component {
                   <Card style={{ elevation: 3 }}>
                                 <Text style={{ 
                                  textAlign: 'center', 
-                                 marginBottom: 25 ,
+                                 marginBottom: 20 ,
                                  marginTop:15 ,
                                  fontWeight : 'bold',
                                  fontSize: 26 }} 
@@ -49,7 +59,7 @@ export default class DeckSwiperAdvancedExample extends Component {
                         <Thumbnail source={item.image} />
                         <Body>
                           
-                          <Text style= {{ fontWeight : 'bold' }} > {item.text}</Text>
+                          <Text style= {{ fontWeight : 'bold' }} > {item.field}</Text>
                           
                         </Body>
                       </Left>
@@ -64,6 +74,10 @@ export default class DeckSwiperAdvancedExample extends Component {
                     <CardItem>
                       <Icon name="planet" style={{ color: '#4fbc83' }} />
                       <Text>{item.city}</Text>
+                    </CardItem>
+                    <CardItem>
+                      <Icon name="ring" style={{ color: '#4fbc83' }} />
+                      <Text>{item.type}</Text>
                     </CardItem>
                         <Button transparent success block>
                         <Text style={{textAlign: 'center'}} >Click for informations </Text></Button>

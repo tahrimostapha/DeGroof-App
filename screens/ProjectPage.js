@@ -21,7 +21,7 @@ export default class ProjectPage extends Component {
 				  </Left>
 				  <Body>
 				    <Text style={styles.ListTitle}>Name</Text>
-				    <Text note>JeanLuc Farming</Text>
+				    <Text note>JeanLuc Farming Project</Text>
 				  </Body>
 				</ListItem>
 				<ListItem avatar>
@@ -39,7 +39,7 @@ export default class ProjectPage extends Component {
 				  </Left>
 				  <Body>
 				    <Text style={styles.ListTitle}>Field</Text>
-				    <Text note>Education & Farming</Text>
+				    <Text note>Education</Text>
 				  </Body>
 				</ListItem>
 				<ListItem avatar>
