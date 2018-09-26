@@ -23,6 +23,22 @@ PersonnalPageStack.navigationOptions = {
   ),
 };
 
+import ListProjectScreen from '../screens/List_project';
+
+
+const ListProjectStack = createStackNavigator({
+  ListProject: ListProjectScreen,
+});
+
+ListProjectStack.navigationOptions = {
+  tabBarLabel: 'ListProject',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+    />
+  ),
+};
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -65,7 +81,11 @@ SettingsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-information-circle${focused ? '' : '-outline'}`
+          : 'md-information-circle'
+      }
     />
   ),
 };
@@ -73,6 +93,6 @@ SettingsStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   ProjectPageStack,
-  SettingsStack,
   PersonnalPageStack,
+  ListProjectStack,
 });
