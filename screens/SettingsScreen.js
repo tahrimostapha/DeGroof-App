@@ -52,7 +52,7 @@ export default class SettingsScreen extends Component {
               <Picker.Item label="" value="key1" />
               <Picker.Item label="" value="key2" />
               <Picker.Item label="" value="key3" />
-              <Picker.Item label="" value="key4" />
+              <Picker.Item label="" value="key4" />ù
             </Picker>
           </Form>
           <Text>Total Hour Counter : {this.state.hourCount}</Text>

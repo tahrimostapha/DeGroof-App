@@ -56,7 +56,6 @@ ProjectPageStack.navigationOptions = {
   ),
 };
 
-<<<<<<< HEAD
 const SettingsStack = createStackNavigator({
   Settings: SettingsScreen,
 });
@@ -74,8 +73,6 @@ SettingsStack.navigationOptions = {
     />
   ),
 };
-=======
->>>>>>> d01e4295d4d15d897c44fe6af475ae281610ae27
 
 export default createBottomTabNavigator({
   HomeStack,
