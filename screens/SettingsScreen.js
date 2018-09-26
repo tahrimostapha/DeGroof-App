@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { StyleSheet } from 'react-native';
-import { Drawer } from 'native-base';
 import { ImageBackground, Image } from 'react-native';
 import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text, Item ,Input, Form, Picker } from 'native-base';
 
@@ -21,20 +20,20 @@ export default class SettingsScreen extends Component {
                             }
                       }
 
-                      onValueChange(value) {
-                        this.setState({
-                          selected: value,
-                        });
-                      }
 
-                      static navigationOptions = {
-                          header: null,
-                      };
+  onValueChange(value) {
+    this.setState({
+      selected: value,
+    });
+  }
+
+  static navigationOptions = {
+      header: null,
+  };
 
                       render() {
                         return (
                             
-                             
                             
                           <Container style={{justifyContent: "center",
                           alignItems: "center" }}>
@@ -132,4 +131,4 @@ export default class SettingsScreen extends Component {
                       }
                     }
 
-                      
+  
