@@ -7,15 +7,19 @@ export default class SettingsScreen extends Component {
   constructor(props){
 		super(props);
 		this.state = {
-      username: "Martin Matin",
-      adress: "Avenue de la Couronne n°5, Ixelles",
-      region: "Bruxelles Capital",
-      hourCount: "15h",
-      selected1: "key2",
-      selected2: "key1",
-      selected3: "key0",  
-    }
-  }
+                          
+                          username: "Martin Matin",
+                          adress: "Avenue de la Couronne n°5, Ixelles",
+                          project: "JeanLuc project",
+                          region: "Bruxelles Capital",
+                          hourCountToDo: "5 ",
+                          hourCountDone:  "3",  
+                          selected1: "key2",
+                          selected2: "key1",
+                          selected3: "key0",  
+                            }
+                      }
+
 
   onValueChange(value) {
     this.setState({

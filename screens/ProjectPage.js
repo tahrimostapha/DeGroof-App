@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     marginBottom : 10,
     marginLeft: 20,
     fontSize: 20,
+    fontFamily: 'Palatino',  
   },
   TextDescription : {
   	marginHorizontal : 20,

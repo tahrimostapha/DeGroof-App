@@ -48,7 +48,7 @@ export default class DeckSwiperAdvancedExample extends Component {
                                  marginTop:60 ,
                                  fontWeight : 'bold',
                                  fontSize: 26,
-                                 fontFamily: 'Palatino'}} 
+                                fontFamily: 'Palatino'}} 
                         > Available Projects </Text>
 
                     <CardItem>
@@ -78,9 +78,9 @@ export default class DeckSwiperAdvancedExample extends Component {
                       <Icon name="home" style={{ color: '#4fbc83' }} />
                       <Text>{item.type}</Text>
                     </CardItem>
-                        <Button transparent block>
-                        <Text style={{textAlign: 'center', color: '#9cd3ab' }} >Click for informations </Text></Button>
-                  </Card>
+                    <Button transparent block>
+                        <Text style={{textAlign: 'center', color: '#9cd3ab' }} >More informations </Text></Button>
+                    </Card>
                 }
               />
             </View>
