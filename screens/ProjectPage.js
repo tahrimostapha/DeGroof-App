@@ -21,7 +21,7 @@ export default class ProjectPage extends Component {
 				  </Left>
 				  <Body>
 				    <Text style={styles.ListTitle}>Name</Text>
-				    <Text note>JeanLuc Farming Project</Text>
+				    <Text note>JeanLuc project from JeanLuc Farming</Text>
 				  </Body>
 				</ListItem>
 				<ListItem avatar>
@@ -56,7 +56,7 @@ export default class ProjectPage extends Component {
 				    <Thumbnail source={{ uri: 'https://static.thenounproject.com/png/369287-200.png' }} />
 				  </Left>
 				  <Body>
-				    <Text style={styles.ListTitle}>Skill Needed</Text>
+				    <Text style={styles.ListTitle}>Skills Needed</Text>
 				    <Text note>Planting, Vrooming and Tractoring</Text>
 				  </Body>
 				</ListItem>

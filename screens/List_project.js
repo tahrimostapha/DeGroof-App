@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon, Button } from 'native-base';
+
 const cards = [
   {
     field: 'Accounting',
     name: 'Xcompta project from ABC Agency ',
-    city: 'Evere',
+    region: 'Evere',
     type: 'Coaching',
-    image: require('../compta.png'),
-  },
-     {
-    field: 'Ecology',
-    name: 'Xfarm project from PigAvenue SPRL ',
-    city: 'Waterloo',
-    type: 'Mentoring',
-    image: require('../fermier.jpg'),
+    image_type: require('../compta.png'),
+    image: require('../compta2.jpg'),
+    
   },
       {
     field: 'Management',
     name: 'Xgestion project from SNCB',
-    city: 'Ixelles',
+    region: 'Ixelles',
     type: 'Coaching',      
-    image: require('../gestion.jpg'),
+    image_type: require('../Management2.jpg'),
+    image: require('../sncb.jpg'),
   },
       {
     field: 'Education',
     name: 'JeanLuc project from JeanLuc Farming',
-    city: 'Habergy',
-    type: 'Mentoring',      
+    region: 'Habergy',
+    type: 'Mentoring',    
+    image_type: require('../education2.jpg'),
     image: require('../champs.png'),
   },
 ];
@@ -39,7 +37,6 @@ export default class DeckSwiperAdvancedExample extends Component {
         return (  
           <Container>
             
-            <Header />
             <View>
               <DeckSwiper
                 dataSource={cards}
@@ -47,16 +44,16 @@ export default class DeckSwiperAdvancedExample extends Component {
                   <Card style={{ elevation: 3 }}>
                                 <Text style={{ 
                                  textAlign: 'center', 
-                                 marginBottom: 20 ,
-                                 marginTop:15 ,
+                                 color: '#4fbc83' ,
+                                 marginTop:60 ,
                                  fontWeight : 'bold',
                                  fontSize: 26 }} 
-                        > Projets Disponibles </Text>
+                        > Available Projects </Text>
 
                     <CardItem>
             
                       <Left>
-                        <Thumbnail source={item.image} />
+                        <Thumbnail source={item.image_type} />
                         <Body>
                           
                           <Text style= {{ fontWeight : 'bold' }} > {item.field}</Text>
@@ -64,6 +61,7 @@ export default class DeckSwiperAdvancedExample extends Component {
                         </Body>
                       </Left>
                     </CardItem>
+            
                     <CardItem cardBody>
                       <Image style={{ height: 300, flex: 1 }} source={item.image} />
                     </CardItem>
@@ -73,14 +71,14 @@ export default class DeckSwiperAdvancedExample extends Component {
                     </CardItem>
                     <CardItem>
                       <Icon name="planet" style={{ color: '#4fbc83' }} />
-                      <Text>{item.city}</Text>
+                      <Text>{item.region}</Text>
                     </CardItem>
                     <CardItem>
-                      <Icon name="ring" style={{ color: '#4fbc83' }} />
+                      <Icon name="home" style={{ color: '#4fbc83' }} />
                       <Text>{item.type}</Text>
                     </CardItem>
-                        <Button transparent success block>
-                        <Text style={{textAlign: 'center'}} >Click for informations </Text></Button>
+                        <Button transparent block>
+                        <Text style={{textAlign: 'center', color: '#9cd3ab' }} >Click for informations </Text></Button>
                   </Card>
                 }
               />
