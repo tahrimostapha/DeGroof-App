@@ -78,4 +78,5 @@ export default createBottomTabNavigator({
   HomeStack,
   ProjectPageStack,
   ListProjectStack,
+  SettingsStack,
 });

@@ -7,16 +7,15 @@ export default class SettingsScreen extends Component {
   constructor(props){
 		super(props);
 		this.state = {
-			username: "machin",
-      adress: "adress",
-      region: "region",
-      skill: "skill",
-      hourCount: "hourCount",
-      selected: "key1"
+			username: "Martin",
+      adress: "Avenue de la Couronne n°5, Ixelles",
+      region: "Bruxelles Capital",
+      hourCount: "15h",
+      selected: "key0"
 		}
   }
 
-  onValueChange(value: string) {
+  onValueChange(value) {
     this.setState({
       selected: value
     });
@@ -35,7 +34,7 @@ export default class SettingsScreen extends Component {
             source={{uri: 'https://e3.365dm.com/18/04/1096x616/skynews-kim-jong-un-north-korea_4278358.jpg'}}
           />
           <Text>Personnal Info Page</Text>
-          <Text>Username :{this.state.username}</Text>
+          <Text>Username : {this.state.username}</Text>
           <Text>Adress : {this.state.adress}</Text>
           <Text>Region : {this.state.region}</Text>
           <Text>SKILL (Selected in the list) {this.state.skill}</Text>
@@ -48,20 +47,24 @@ export default class SettingsScreen extends Component {
               selectedValue={this.state.selected}
               onValueChange={this.onValueChange.bind(this)}
             >
-              <Picker.Item label="" value="key0" />
-              <Picker.Item label="" value="key1" />
-              <Picker.Item label="" value="key2" />
-              <Picker.Item label="" value="key3" />
-              <Picker.Item label="" value="key4" />ù
+              <Picker.Item label="Management" value="key0" />
+              <Picker.Item label="Financial Consulting" value="key1" />
+              <Picker.Item label="Market Survey" value="key2" />
+              <Picker.Item label="RGPD Consulting" value="key3" />
+              <Picker.Item label="Tax Accountant " value="key4" />
             </Picker>
           </Form>
-          <Text>Total Hour Counter : {this.state.hourCount}</Text>
+          <Text>Total Hour on app : {this.state.hourCount}</Text>
         </Content>
       </Container>
     );
   }
 }
 
+  // const styles=StyleSheet.create({
+  //   container: {
 
+  //   },
+  // })
  
        
