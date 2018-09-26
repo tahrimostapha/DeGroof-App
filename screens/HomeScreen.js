@@ -24,7 +24,8 @@ export default class HomeScreen extends Component {
                     <Text style={{ 
                                  textAlign: 'center', 
                                  marginBottom: 25 , 
-                                 fontSize: 26 }} 
+                                 fontSize: 26 ,
+                                 fontFamily: 'Palatino'}} 
                         > My DP Projects </Text>
 
                     <Form >
@@ -40,6 +41,7 @@ export default class HomeScreen extends Component {
 
                         <Button transparent success block style={{ marginTop: 80 }}>
                         <Text style={{textAlign: 'center'}} >Sign Up</Text></Button>
+                            
                     </Form>
                 </Content>
             </ImageBackground>

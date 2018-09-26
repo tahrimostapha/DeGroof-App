@@ -47,7 +47,8 @@ export default class DeckSwiperAdvancedExample extends Component {
                                  color: '#4fbc83' ,
                                  marginTop:60 ,
                                  fontWeight : 'bold',
-                                 fontSize: 26 }} 
+                                 fontSize: 26,
+                                 fontFamily: 'Palatino'}} 
                         > Available Projects </Text>
 
                     <CardItem>
