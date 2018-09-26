@@ -33,11 +33,11 @@ export default class SettingsScreen extends Component {
         <ImageBackground source={require('../fondperso.png')} style={{width: '100%', alignItems: 'center'}}>
         <Text style={{
             marginTop: 80, 
-              color: '#4fbc83',
-              fontWeight : 'bold',
-              fontSize: 26,
-              alignItems: 'center',
-              fontFamily: 'Palatino'}} > Personnal Info Page
+            color: '#4fbc83',
+            fontWeight : 'bold',
+            fontSize: 26,
+            alignItems: 'center',
+            fontFamily: 'Palatino'}} > Personnal Info Page
         </Text>
           <Image
             style={{
@@ -108,7 +108,7 @@ export default class SettingsScreen extends Component {
               </Picker>
             </Form>
           </Content>
-            <Text style={{marginBottom: 50, fontWeight: "bold", fontSize: 25, color: '#9cd3ab', fontFamily: 'Palatino'}}>Total Hours : {this.state.hourCount}</Text>
+          <Text style={{marginBottom: 50, fontWeight: "bold", fontSize: 25, color: '#9cd3ab', fontFamily: 'Palatino'}}>Total Hours : {this.state.hourCount}</Text>
       </Container>
     );
   }
