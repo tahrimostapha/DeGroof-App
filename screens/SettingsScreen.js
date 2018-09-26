@@ -11,8 +11,10 @@ export default class SettingsScreen extends Component {
                           
                           username: "Martin Matin",
                           adress: "Avenue de la Couronne n°5, Ixelles",
+                          project: "JeanLuc project",
                           region: "Bruxelles Capital",
-                          hourCount: "15h",
+                          hourCountToDo: "5 ",
+                          hourCountDone:  "3",  
                           selected1: "key2",
                           selected2: "key1",
                           selected3: "key0",  
@@ -37,10 +39,10 @@ export default class SettingsScreen extends Component {
                           <Container style={{justifyContent: "center",
                           alignItems: "center" }}>
                             
-                            <ImageBackground source={require('../fondperso.png')} style={{width: '100%', alignItems: 'center'}}>
+                            <ImageBackground source={require('../fondperso.png')} style={{width: '100%', height: 300, alignItems: 'center'}}>
                             
                             <Text style={{
-                                marginTop: 80, 
+                                marginTop: 65, 
                                  color: '#4fbc83',
                                  fontWeight : 'bold',
                                  fontSize: 26,
@@ -53,7 +55,7 @@ export default class SettingsScreen extends Component {
                                     width:160, 
                                     resizeMode: 'contain',
                                     marginTop: -180,
-                                    marginBottom: -200,
+                                    marginBottom: -160,
                                     justifyContent: "center",
                                     alignItems: "center"
                                 }} 
@@ -65,7 +67,7 @@ export default class SettingsScreen extends Component {
                                 <Text style={{marginBottom: 10}}>•  Username : {this.state.username}</Text>
                                 <Text style={{marginBottom: 10}}>•  Adress  : {this.state.adress}</Text>
                                 <Text style={{marginBottom: 20}}>•  Region : {this.state.region}</Text>
-                                <Text style={{marginBottom: 10}}>SKILL (Select in the list): {this.state.skill}</Text>
+                                <Text style={{marginBottom: 15}}>SKILL (Select in the list): {this.state.skill}</Text>
                                 <Form>
                                   <Picker
                                     mode="dropdown"
@@ -120,8 +122,11 @@ export default class SettingsScreen extends Component {
                                   </Picker>
                                 </Form>
                               </Content>
-                                <Text style={{marginBottom: 50, fontWeight: "bold", fontSize: 25, color: '#9cd3ab', fontFamily: 'Palatino'}}>Total Hours : {this.state.hourCount}</Text>
-                          
+                                <Text style={{marginBottom: 10, fontWeight: "bold", fontSize: 25, color: '#9cd3ab', fontFamily: 'Palatino'}}>Total Hours Done: {this.state.hourCountDone} on {this.state.hourCountToDo}</Text>
+                                <Button transparent block>
+                                        <Text style={{textAlign: 'center', color: '#01524b' }} >Click here for All Your Project </Text></Button>
+                               
+                                 
                           </Container>
                         );
                       }

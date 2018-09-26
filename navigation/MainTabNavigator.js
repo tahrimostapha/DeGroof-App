@@ -7,7 +7,9 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import ProjectPageScreen from '../screens/ProjectPage';
-import ListProjectScreen from '../screens/List_project';
+import ListProjectScreen from '../screens/YourProject';
+import MissionPageScreen from '../screens/MissionPage';
+import YourProjectScreen from '../screens/YourProject';
 
 
 const ListProjectStack = createStackNavigator({
@@ -79,4 +81,5 @@ export default createBottomTabNavigator({
   ProjectPageStack,
   ListProjectStack,
   SettingsStack,
+  
 });
