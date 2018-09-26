@@ -7,6 +7,22 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import ProjectPageScreen from '../screens/ProjectPage';
+import PersonnalPageScreen from '../screens/PersonnalPage';
+
+const PersonnalPageStack = createStackNavigator({
+  PersonnalPage: PersonnalPageScreen,
+});
+
+PersonnalPageStack.navigationOptions = {
+  tabBarLabel: 'PersonnalPage',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
+    />
+  ),
+};
+
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -58,4 +74,5 @@ export default createBottomTabNavigator({
   HomeStack,
   ProjectPageStack,
   SettingsStack,
+  PersonnalPageStack,
 });
