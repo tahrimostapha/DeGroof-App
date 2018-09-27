@@ -15,7 +15,7 @@ export default class SettingsScreen extends Component {
                           hourCountToDo: "5 ",
                           hourCountDone:  "3",  
                           selected1: "key2",
-                          selected2: "key1",
+                          selected2: "key5",
                           selected3: "key0",  
                             }
                       }
@@ -76,12 +76,22 @@ export default class SettingsScreen extends Component {
                                     selectedValue={this.state.selected1}
                                     onValueChange={this.onValueChange.bind(this)}
                                   >
-                                    <Picker.Item label="Management" value="key0" />
-                                    <Picker.Item label="Financial Consulting" value="key1" />
-                                    <Picker.Item label="Market Survey" value="key2" />
-                                    <Picker.Item label="RGPD Consulting" value="key3" />
-                                    <Picker.Item label="Tax Accountant " value="key4" />
-                                    <Picker.Item label=" " value="key5" />     
+                                    <Picker.Item label=" Management" value="key0" />
+                                    <Picker.Item label=" Financial Consulting" value="key1" />
+                                    <Picker.Item label=" Market Survey" value="key2" />
+                                    <Picker.Item label=" RGPD Consulting" value="key3" />
+                                    <Picker.Item label=" Tax Accountant " value="key4" />
+                                    <Picker.Item label=" English " value="key5" /> 
+                                    <Picker.Item label=" Deutsh " value="key6" /> 
+                                    <Picker.Item label=" Communication " value="key7" /> 
+                                    <Picker.Item label=" Hr " value="key8" /> 
+                                    <Picker.Item label=" Psychology " value="key9" /> 
+                                    <Picker.Item label=" Mecanical sciences" value="key10" /> 
+                                    <Picker.Item label=" Electricity " value="key11" /> 
+                                    <Picker.Item label=" Auto " value="key12" /> 
+                                    <Picker.Item label=" Medical sciences " value="key13" /> 
+                                    <Picker.Item label=" Chemical sciences " value="key14" /> 
+                                   
                                   </Picker>
 
                                 </Form>
@@ -99,7 +109,16 @@ export default class SettingsScreen extends Component {
                                     <Picker.Item label="Market Survey" value="key2" />
                                     <Picker.Item label="RGPD Consulting" value="key3" />
                                     <Picker.Item label="Tax Accountant " value="key4" />
-                                    <Picker.Item label=" " value="key5" />    
+                                    <Picker.Item label=" English " value="key5" /> 
+                                    <Picker.Item label=" Deutsh " value="key6" /> 
+                                    <Picker.Item label=" Communication " value="key7" /> 
+                                    <Picker.Item label=" Hr " value="key8" /> 
+                                    <Picker.Item label=" Psychology " value="key9" /> 
+                                    <Picker.Item label=" Mecanical sciences" value="key10" /> 
+                                    <Picker.Item label=" Electricity " value="key11" /> 
+                                    <Picker.Item label=" Auto " value="key12" /> 
+                                    <Picker.Item label=" Medical sciences " value="key13" /> 
+                                    <Picker.Item label=" Chemical sciences " value="key14" />     
                                         
                                   </Picker>
                                 </Form>
@@ -117,7 +136,17 @@ export default class SettingsScreen extends Component {
                                     <Picker.Item label="Market Survey" value="key2" />
                                     <Picker.Item label="RGPD Consulting" value="key3" />
                                     <Picker.Item label="Tax Accountant " value="key4" />
-                                    <Picker.Item label=" " value="key5" /> 
+                                    <Picker.Item label=" English " value="key5" /> 
+                                    <Picker.Item label=" Deutsh " value="key6" /> 
+                                    <Picker.Item label=" Communication " value="key7" /> 
+                                    <Picker.Item label=" Hr " value="key8" /> 
+                                    <Picker.Item label=" Psychology " value="key9" /> 
+                                    <Picker.Item label=" Mecanical sciences" value="key10" /> 
+                                    <Picker.Item label=" Electricity " value="key11" /> 
+                                    <Picker.Item label=" Auto " value="key12" /> 
+                                    <Picker.Item label=" Medical sciences " value="key13" /> 
+                                    <Picker.Item label=" Chemical sciences " value="key14" /> 
+                                        
                                   </Picker>
                                 </Form>
                               </Content>

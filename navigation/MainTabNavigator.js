@@ -5,8 +5,8 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import ProjectPageScreen from '../screens/ProjectPage';
-import ListProjectScreen from '../screens/YourProject';
+import ProjectPageScreen from '../screens/MissionPage';
+import ListProjectScreen from '../screens/List_project';
 import MissionPageScreen from '../screens/MissionPage';
 import YourProjectScreen from '../screens/YourProject';
 
