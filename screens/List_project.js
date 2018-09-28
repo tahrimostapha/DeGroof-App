@@ -33,6 +33,9 @@ export default class DeckSwiperAdvancedExample extends Component {
     static navigationOptions = {
         header: null,
     };
+    onLearnMore = () => {
+        this.props.navigation.navigate('ProjectPage');
+    }
     render() {
         return (  
           <Container>
@@ -47,7 +50,8 @@ export default class DeckSwiperAdvancedExample extends Component {
                                  color: '#4fbc83' ,
                                  marginTop:60 ,
                                  fontWeight : 'bold',
-                                 fontSize: 26 }} 
+                                 fontSize: 26,
+                                fontFamily: 'Palatino'}} 
                         > Available Projects </Text>
 
                     <CardItem>
@@ -63,7 +67,7 @@ export default class DeckSwiperAdvancedExample extends Component {
                     </CardItem>
             
                     <CardItem cardBody>
-                      <Image style={{ height: 300, flex: 1 }} source={item.image} />
+                      <Image style={{ height: 300, flex: 1 }} source={item.image} onPress={()=>this.onLearnMore()} />
                     </CardItem>
                     <CardItem>
                       <Icon name="home" style={{ color: '#4fbc83' }} />
@@ -77,9 +81,9 @@ export default class DeckSwiperAdvancedExample extends Component {
                       <Icon name="home" style={{ color: '#4fbc83' }} />
                       <Text>{item.type}</Text>
                     </CardItem>
-                        <Button transparent block>
-                        <Text style={{textAlign: 'center', color: '#9cd3ab' }} >Click for informations </Text></Button>
-                  </Card>
+                    <Button transparent block onPress={()=>this.onLearnMore()} >
+                        <Text style={{textAlign: 'center', color: '#9cd3ab' }} >More informations </Text></Button>
+                    </Card>
                 }
               />
             </View>

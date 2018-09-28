@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, ImageBackground } from 'react-native';
 import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button } from 'native-base';
 export default class ProjectPage extends Component {
   static navigationOptions = {
       header: null,
   };
+
+    onApply = () => {
+        this.props.navigation.navigate('MissionPage');
+    }
   render() {
     return (
       <Container>
         <Content>
+        
 	        <Image
               style={{height: 250, flex:1}}
-              source={{uri: 'https://robohub.org/wp-content/uploads/2016/05/DeepfieldRobotics.png'}}
+              source={require('../champs.png')}
             />
+            <ImageBackground source={require('../cover_grey.png')} style={{width: '100%', height: '100%'}}>
             <Text style={styles.TitleDescription}>Project Description</Text>
 			<List>
 				<ListItem avatar>
@@ -72,9 +78,10 @@ export default class ProjectPage extends Component {
 			</List>
 			<Text style={styles.TitleDescription}>Mission Description</Text>
 			<Text note style={styles.TextDescription}>Même si on se ment, ce n'est pas un simple sport car on est tous capables de donner des informations à chacun car l'aboutissement de l'instinct, c'est l'amour ! Donc on n'est jamais seul spirituellement !</Text>
-			<Button full style={styles.ButtonApply}>
+			<Button full style={styles.ButtonApply} onPress={()=>this.onApply()}>
 	           <Text>Apply for this mission</Text>
 	        </Button>
+            </ImageBackground>
         </Content>
       </Container>
     );
@@ -94,6 +101,7 @@ const styles = StyleSheet.create({
     marginBottom : 10,
     marginLeft: 20,
     fontSize: 20,
+    fontFamily: 'Palatino',  
   },
   TextDescription : {
   	marginHorizontal : 20,
