@@ -27,6 +27,10 @@ export default class SettingsScreen extends Component {
     });
   }
 
+  onApply = () => {
+    this.props.navigation.navigate('ListExamples');
+}
+
   static navigationOptions = {
       header: null,
   };
@@ -151,7 +155,7 @@ export default class SettingsScreen extends Component {
                                 </Form>
                               </Content>
                                 <Text style={{marginBottom: 10, fontWeight: "bold", fontSize: 25, color: '#9cd3ab', fontFamily: 'Palatino'}}>Total Hours Done: {this.state.hourCountDone} on {this.state.hourCountToDo}</Text>
-                                <Button transparent block>
+                                <Button transparent block onPress={()=>this.onApply()}>
                                         <Text style={{textAlign: 'center', color: '#01524b' }} >Click here for All Your Project </Text></Button>
                                
                                  

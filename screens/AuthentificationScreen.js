@@ -36,11 +36,16 @@ export default class AuthentificationScreen extends Component {
                 .signInWithEmailAndPassword(email, pass);
 
             console.log("Logged In!");
-            this.props.navigation.navigate('ListProject');
+            this.props.navigation.navigate('Settings');
+            this.setState({
+                email   : '',
+                password: '',
+            })
             // Redirection vers la page d'Accueil.
 
         } catch (error) {
             console.log(error.toString())
+            this.itemAction({type : "error",message : "Une erreur est survenue lors de l'enregistrement.", title : "Données refusées !"});
             // Affiche les erreurs de connection (erreur de format)
         }
 

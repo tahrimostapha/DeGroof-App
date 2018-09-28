@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { ImageBackground, Image } from 'react-native';
-import { Container, Header, Content, List, ListItem, Text, Separator } from 'native-base';
+import { Container, Header, Button, Content, List, ListItem, Text, Separator } from 'native-base';
 export default class ListSeparatorExample extends Component {
       static navigationOptions = {
       header: null,
   };
+
+  onApply = () => {
+    this.props.navigation.navigate('Settings');
+}
   render() {
     return (
       <Container>
@@ -39,6 +43,8 @@ export default class ListSeparatorExample extends Component {
           <ListItem last>
             <Text>Lee Allen Project 1 HOURS</Text>
           </ListItem>
+          <Button transparent block onPress={()=>this.onApply()}>
+                                        <Text style={{textAlign: 'center', color: '#01524b' }} > Back </Text></Button>
         </Content>
         </ImageBackground>
       </Container>

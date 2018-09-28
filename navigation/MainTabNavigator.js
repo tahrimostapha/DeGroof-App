@@ -3,12 +3,11 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import TabBarIcon from '../components/TabBarIcon';
 import AuthentificationScreen from '../screens/AuthentificationScreen';
-import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import ProjectPageScreen from '../screens/ProjectPage';
 import ListProjectScreen from '../screens/List_project';
 import MissionPageScreen from '../screens/MissionPage';
-import YourProjectScreen from '../screens/YourProject';
+import ListSeparatorExample from '../screens/YourProject';
 
 
 const ListProjectStack = createStackNavigator({
@@ -47,11 +46,12 @@ AuthentificationStack.navigationOptions = {
 };
 
 const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+  Settings: { screen: SettingsScreen},
+  ListExamples: { screen: ListSeparatorExample}
 });
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Personnal Page',
+  tabBarLabel: 'Personal Page',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -66,6 +66,6 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   AuthentificationStack,
-  ListProjectStack,
-  SettingsStack, 
+  SettingsStack,
+  ListProjectStack, 
 });

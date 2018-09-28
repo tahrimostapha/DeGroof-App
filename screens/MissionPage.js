@@ -1,17 +1,34 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet, ImageBackground } from 'react-native';
 import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button, DatePicker } from 'native-base';
+import DropdownAlert from 'react-native-dropdownalert';
 export default class MissionPage extends Component {
   static navigationOptions = {
       header: null,
-      hiddenTabs: ['ProjectPage'],
   };
 
 constructor(props) {
     super(props);
     this.state = { chosenDate: new Date() };
     this.setDate = this.setDate.bind(this);
-  }
+	}
+	
+	itemAction(item) {
+		switch (item.type) {
+		case 'close':
+				this.closeAction();
+				break;
+		default:
+				const random = Math.floor(Math.random() * 1000 + 1);
+				const title = item.type + ' #' + random;
+				this.dropdown.alertWithType(item.type, title, item.message);
+		}
+}
+
+	componentDidMount(){
+		this.itemAction({type : "success",message : "Votre candidature a été enregistrée.", title : "Participation validées !"});
+	}
+
   setDate(newDate) {
     this.setState({ chosenDate: newDate });
   }
@@ -123,6 +140,13 @@ constructor(props) {
             
             </ImageBackground>
         </Content>
+				<DropdownAlert
+          ref={ref => this.dropdown = ref}
+          showCancel={true}
+        //   onClose={data => this.handleClose(data)}
+        //   onCancel={data => this.handleCancel(data)}
+          imageSrc={'https://facebook.github.io/react-native/docs/assets/favicon.png'}
+        />
       </Container>
     );
   }
