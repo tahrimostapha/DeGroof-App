@@ -46,7 +46,7 @@ export default class SettingsScreen extends Component {
                                  fontWeight : 'bold',
                                  fontSize: 26,
                                  alignItems: 'center',
-                                 fontFamily: 'Palatino'}} > Personnal Info Page
+                                 fontFamily: 'Palatino'}} > Personal Info Page
                             </Text>
                          
                               <Image
@@ -63,10 +63,10 @@ export default class SettingsScreen extends Component {
                             </ImageBackground>
                               <Content>
                                 <Text>{this.state.image}</Text>
-                                <Text style={{marginBottom: 10}}>•  Username : {this.state.username}</Text>
-                                <Text style={{marginBottom: 10}}>•  Adress  : {this.state.adress}</Text>
-                                <Text style={{marginBottom: 20}}>•  Region : {this.state.region}</Text>
-                                <Text style={{marginBottom: 15}}>SKILL (Select in the list): {this.state.skill}</Text>
+                                <Text style={{marginBottom: 10, fontFamily: 'Palatino'}}>•  Username : {this.state.username}</Text>
+                                <Text style={{marginBottom: 10, fontFamily: 'Palatino'}}>•  Adress  : {this.state.adress}</Text>
+                                <Text style={{marginBottom: 20, fontFamily: 'Palatino'}}>•  Region : {this.state.region}</Text>
+                                <Text style={{marginBottom: 15, fontFamily: 'Palatino'}}>SKILL (Select in the list): {this.state.skill}</Text>
                                 <Form>
                                   <Picker
                                     mode="dropdown"
@@ -79,7 +79,7 @@ export default class SettingsScreen extends Component {
                                     <Picker.Item label=" Management" value="key0" />
                                     <Picker.Item label=" Financial Consulting" value="key1" />
                                     <Picker.Item label=" Market Survey" value="key2" />
-                                    <Picker.Item label=" RGPD Consulting" value="key3" />
+                                    <Picker.Item label=" uyRGPD Consulting" value="key3" />
                                     <Picker.Item label=" Tax Accountant " value="key4" />
                                     <Picker.Item label=" English " value="key5" /> 
                                     <Picker.Item label=" Deutsh " value="key6" /> 
@@ -145,7 +145,7 @@ export default class SettingsScreen extends Component {
                                     <Picker.Item label=" Electricity " value="key11" /> 
                                     <Picker.Item label=" Auto " value="key12" /> 
                                     <Picker.Item label=" Medical sciences " value="key13" /> 
-                                    <Picker.Item label=" Chemical sciences " value="key14" /> 
+                                    <Picker.Item label=" Chemical sciences " value="key14" />  
                                         
                                   </Picker>
                                 </Form>

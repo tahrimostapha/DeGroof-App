@@ -5,7 +5,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import ProjectPageScreen from '../screens/MissionPage';
+import ProjectPageScreen from '../screens/ProjectPage';
 import ListProjectScreen from '../screens/List_project';
 import MissionPageScreen from '../screens/MissionPage';
 import YourProjectScreen from '../screens/YourProject';
@@ -21,6 +21,25 @@ ListProjectStack.navigationOptions = {
     <TabBarIcon
       focused={focused}
       name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+    />
+  ),
+};
+
+
+const MissionPageStack = createStackNavigator({
+  MissionPage: MissionPageScreen,
+});
+
+MissionPageStack.navigationOptions = {
+  tabBarLabel: 'MissionPageStack',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-information-circle${focused ? '' : '-outline'}`
+          : 'md-information-circle'
+      }
     />
   ),
 };

@@ -5,6 +5,10 @@ export default class ProjectPage extends Component {
   static navigationOptions = {
       header: null,
   };
+
+    onApply = () => {
+        this.props.navigation.navigate('MissionPage');
+    }
   render() {
     return (
       <Container>
@@ -74,7 +78,7 @@ export default class ProjectPage extends Component {
 			</List>
 			<Text style={styles.TitleDescription}>Mission Description</Text>
 			<Text note style={styles.TextDescription}>Même si on se ment, ce n'est pas un simple sport car on est tous capables de donner des informations à chacun car l'aboutissement de l'instinct, c'est l'amour ! Donc on n'est jamais seul spirituellement !</Text>
-			<Button full style={styles.ButtonApply}>
+			<Button full style={styles.ButtonApply} onPress={()=>this.onApply()}>
 	           <Text>Apply for this mission</Text>
 	        </Button>
             </ImageBackground>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image, StyleSheet, ImageBackground } from 'react-native';
 import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail, Text, Button, DatePicker } from 'native-base';
-export default class ProjectPage extends Component {
+export default class MissionPageScreen extends Component {
   static navigationOptions = {
       header: null,
   };
