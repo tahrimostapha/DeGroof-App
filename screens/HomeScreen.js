@@ -9,7 +9,6 @@ export default class HomeScreen extends Component {
     
   render() {
     return (
-
         <Container>
             <ImageBackground source={require('../cover_grey.png')} style={{width: '100%', height: '100%'}}>
                 <Content>

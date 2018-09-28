@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
@@ -12,7 +12,9 @@ import YourProjectScreen from '../screens/YourProject';
 
 
 const ListProjectStack = createStackNavigator({
-  ListProject: ListProjectScreen,
+  ListProject: { screen: ListProjectScreen},
+  ProjectPage: { screen: ProjectPageScreen },
+  MissionPage : { screen: MissionPageScreen}
 });
 
 ListProjectStack.navigationOptions = {
@@ -21,25 +23,6 @@ ListProjectStack.navigationOptions = {
     <TabBarIcon
       focused={focused}
       name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
-    />
-  ),
-};
-
-
-const MissionPageStack = createStackNavigator({
-  MissionPage: MissionPageScreen,
-});
-
-MissionPageStack.navigationOptions = {
-  tabBarLabel: 'MissionPageStack',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
     />
   ),
 };
@@ -58,20 +41,6 @@ HomeStack.navigationOptions = {
           ? `ios-information-circle${focused ? '' : '-outline'}`
           : 'md-information-circle'
       }
-    />
-  ),
-};
-
-const ProjectPageStack = createStackNavigator({
-  ProjectPage: ProjectPageScreen,
-});
-
-ProjectPageStack.navigationOptions = {
-  tabBarLabel: 'ProjectPage',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
     />
   ),
 };
@@ -96,8 +65,6 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  ProjectPageStack,
   ListProjectStack,
-  SettingsStack,
-  
+  SettingsStack, 
 });
