@@ -45,7 +45,8 @@ const AuthentificationStack = createStackNavigator({
 });
 
 AuthentificationStack.navigationOptions = {
-  tabBarLabel: 'Authentification',
+  tabBarVisible : false,
+  tabBarLabel: 'Logout',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
