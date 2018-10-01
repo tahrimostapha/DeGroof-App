@@ -1,18 +1,38 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-
+import { createStackNavigator, createBottomTabNavigator} from 'react-navigation';
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import AuthentificationScreen from '../screens/AuthentificationScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ProjectPageScreen from '../screens/ProjectPage';
+import ListProjectScreen from '../screens/List_project';
+import MissionPageScreen from '../screens/MissionPage';
+import ListSeparatorExample from '../screens/YourProject';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+
+const ListProjectStack = createStackNavigator({
+  ListProject: { screen: ListProjectScreen},
+  ProjectPage: { screen: ProjectPageScreen },
+  MissionPage : { screen: MissionPageScreen}
 });
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+ListProjectStack.navigationOptions = {
+  tabBarLabel: 'ListProject',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+    />
+  ),
+};
+
+const AuthentificationStack = createStackNavigator({
+  Authentification: AuthentificationScreen,
+});
+
+AuthentificationStack.navigationOptions = {
+  tabBarVisible : false,
+  tabBarLabel: 'Logout',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -25,36 +45,27 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
-});
-
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
-    />
-  ),
-};
-
 const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+  Settings: { screen: SettingsScreen},
+  ListExamples: { screen: ListSeparatorExample}
 });
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+  tabBarLabel: 'Personal Page',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-information-circle${focused ? '' : '-outline'}`
+          : 'md-information-circle'
+      }
     />
   ),
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
+  AuthentificationStack,
   SettingsStack,
+  ListProjectStack, 
 });

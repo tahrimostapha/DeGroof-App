@@ -22,6 +22,12 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android" : {
+      "package" : "com.lingonsaft.app",
+      "versionCode" : 1,
+      "permissions" : [],
+      "icon" : "./icondp.png"
     }
   }
 }
